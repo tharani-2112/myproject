@@ -1,0 +1,76 @@
+#topimage img
+{
+height:400px;
+width:100%;
+}
+#topimage input
+{
+text-allign:center;
+display:flex;
+color:black;
+position:absolute;
+top:60%;
+left:30%;
+padding:14px 16px;
+font-size:20px;
+ padding: 8px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 40%;
+  background: #f1f1f1;
+}
+#topimage button
+{
+top:60%;
+left:66%;
+display:flex;
+position:absolute;
+padding: 10px;
+  float: left;
+  width: 4%;
+  background: #2196F3;
+  color: white;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  
+}
+div.scrollmenu {
+  background-color: black;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+.image1
+{
+border:  solid orange;
+border-radius:200px; 
+display:flex;
+justify-content:space-around;
+}
+#bottom
+{
+  padding:50px;
+  background-color:black;
+  box-sizing:content-box;
+  color:white;
+  text-align:center;
+  position: relative;
+  height: 50px;
+
+}
+

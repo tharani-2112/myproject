@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Register Page</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+    <div id="container">
+    <img id="image" src="C:\Users\admin\Desktop\My project\images\usericon.jpg" height="70" width='70'/>
+    <div class="form" action="register.php" method="post">
+             <h5 class="heading">REGISTER HERE</h5>
+        <input class="inputs" name="FirstName" id="FirstName" onfocusout="Firstname()" required type="text" max="20" placeholder="First Name"/>
+            <p id="p1" class="subTest"></p>
+        <input class="inputs" id="SecondName" name="SecondName" required type="text" onfocusout="Secondname()" max="20" min="2" placeholder="Last Name"/>
+            <p id="p2" class="subTest"></p>
+        <input class="inputs" required name="Email" id="Email" onfocusout="email()" type="text" placeholder="Email address"/>
+            <p id="p3" class="subTest"></p>
+        <input class="inputs" required name="confirmpassword" id="ps1" onfocusout="confirmPassword()" type="password" placeholder="Create Password"/>
+            <p id="p5" class="subTest"></p>
+        <input class="inputs" required name="password" id="ps2" type="password" onfocusout="call1()" placeholder="Confirm Password"/>
+            <p id="p4" class="subTest"></p>
+        <input id="button" type="submit" onclick="Movetomainpage()" value="Signup">
+    </div>
+    </div>
+</body>
+<script src="C:\Users\admin\Desktop\My project\js files\register.js"></script>
+</html>
