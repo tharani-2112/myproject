@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Register Page</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\tharani.harichandran\Downloads\registration page\registration page\registrationpage.css">
+    <link rel="stylesheet" type="text/css" href="D:\dailytasks\26june2021\registration page\registrationpage.css">
 </head>
 <body>
     <div id="container">
@@ -10,70 +10,70 @@
     <table>
         <tr>
         <td><label>Name *</label></td>
-        <td><input class="inputs" name="FullName" id="FullName" onfocusout="FullName()" required type="text" max="20" placeholder="FullName"/>
+        <td><input class="inputs" name="FullName" id="FullName" required type="text" max="20" placeholder="FullName"/>
             <p id="p1" class="subTest"></p></td>
         </tr>
         <tr>
         <td><label>UserName *</label> </td>       
-        <td><input class="inputs" id="UserName" name="UserName" required type="email" onfocusout="UserName()" max="30"  placeholder="Email"/>
+        <td><input class="inputs" id="UserName" name="UserName" required type="email" max="30"  placeholder="Email"/>
             <p id="p2" class="subTest"></p></td>
         </tr>
         <tr>  
         <td><label>Gender *</label></td>
-        <td><input value="Male" class="input" name="Gender" id="Gender" required onfocusout="Gender()" type="radio"/>
+        <td><input value="Male" class="input" name="Gender" id="m_Gender" required type="radio"/>
         <label class="input">Male</label>
-        <input class="input" value="Female" name="Gender" id="Gender" required onfocusout="Gender()" type="radio"/>
+        <input class="input" value="Female" name="Gender" id="f_Gender" required type="radio"/>
         <label class="input">Female</label>
          <p id="p3" class="subTest"></p></td>
         </tr>
         <tr>
         <td><label>Password *</label></td>
-        <td><input class="inputs" required name="confirmpassword" id="ps1"  onfocusout="Password()" type="password" placeholder="Create Password"/>
+        <td><input class="inputs" required name="confirmpassword" id="ps1" type="password" placeholder="Create Password"/>
             <p id="p4" class="subTest"></p></td>
         </tr>
         <tr>
         <td><label>ConfirmPassword *</label></td>
-        <td><input class="inputs" required name="password" id="ps2" type="password" onfocusout="confirmPassword()" placeholder="Retype Password"/>
+        <td><input class="inputs" required name="password" id="ps2" type="password"  placeholder="Retype Password"/>
             <p id="p5" class="subTest"></p></td>
         </tr>
         <tr>
         <td><label>Country *</label></td>
         <td><select class="inputs" id="country" name="country">
-            <option selected value="-1">select</option>
-            <option>India</option>
-            <option>US</option>
-            <option>UK</option>
-            <option>Canada</option>
-        </select></td></tr>
-        <tr>
+            <option value="select">select</option>
+            <option value="india">India</option>
+            <option value="us">US</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+        </select><p id="p6" class="subTest"></p></td></tr>
+        <tr id="languages">
         <td><label>Programming languages known *</label></td>
-        <td> <input type="checkbox" id="languages"/>
+        <td> <input type="checkbox" id="c" value="1"/>
            <label>C</label><br>
-          <input type="checkbox" id="languages"/>
+          <input type="checkbox" id="java" value="2"/>
             <label>Java</label><br>
-          <input type="checkbox" id="languages"/>
+          <input type="checkbox" id="html" value="3"/>
             <label class="input">HTML</label><br>
-          <input type="checkbox" id="languages"/>
+          <input type="checkbox" id="css" value="4"/>
             <label >CSS</label><br>
-          <input type="checkbox" id="languages"/>
-            <label>Python</label><p id="lang"></p></td>
+          <input type="checkbox" id="python" value="5"/>
+            <label>Python</label><p id="p7" class="subTest"></p></p></td>
          
         </tr>
        
         <tr>
         <td><label>Address *</label></td>
         
-         <td><textarea class="inputs" id="message" onfocus="languageValidation()" onfocusout="AddressValidation()" placeholder="Enter your address here..."></textarea> 
-            <p class="subTest" id="addressError"></p></td>
+         <td><textarea class="inputs" id="message" placeholder="Enter your address here..."></textarea> 
+            <p id="p8" class="subTest"></p></td>
         </tr>
         <tr>
         <td><label>Upload a file *</label></td>
-        <td><input  id="file" class="inputs" onfocusout="filevalidation()" type="file" required/>
-            <p class="subTest" id="fileError"></p></td></tr>
+        <td><input  id="file" class="inputs" type="file" required/>
+            <p class="subTest" id="p9"></p></td></tr>
         </table>
         <input id="button" type="submit" onclick="Register()" value="Register">
     </div>
     </div>
 </body>
-<script src="D:\myproject\registration page\registrationpage.js"></script>
+<script src="D:\dailytasks\26june2021\registration page\registrationpage.js"></script>
 </html>
