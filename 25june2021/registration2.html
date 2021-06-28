@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>Register Page2</title>
+    <link rel="stylesheet" type="text/css" href="D:\myproject\registration2\registration2.css">
+</head>
+<body>
+    <div id="container">
+    <form class="form" action="register.php" method="post">
+             <h2 class="heading">REGISTRATION FORM</h2>
+    <table>
+        <tr>
+        <td><label>Name *</label></td>
+        <td><input class="inputs" name="FullName" id="FullName" required type="text" max="20" placeholder="FullName"/>
+            <p id="p1" class="subTest"></p></td>
+        </tr>
+        <tr>
+        <td><label>UserName *</label> </td>       
+        <td><input class="inputs" id="UserName" name="UserName" required type="email" max="30"  placeholder="Email"/>
+            <p id="p2" class="subTest"></p></td>
+        </tr>
+        <tr>  
+        <td><label>Gender *</label></td>
+        <td><input name="Gender" id="Male" required value="Male" type="radio"/>Male
+        <input name="Gender" id="Female" required value="Female" type="radio"/>Female
+         <p id="p3" class="subTest"></p></td>
+        </tr>
+        <tr>
+        <td><label>Password *</label></td>
+        <td><input class="inputs" required name="confirmpassword" id="ps1" minlength="5" type="password" placeholder="Create Password"/>
+            <p id="p4" class="subTest"></p></td>
+        </tr>
+        <tr>
+        <td><label>ConfirmPassword *</label></td>
+        <td><input class="inputs" required name="password" id="ps2" type="password" minlength="5" placeholder="Retype Password"/>
+            <p id="p5" class="subTest"></p></td>
+        </tr>
+        <tr>
+        <td><label>Country *</label></td>
+        <td><select class="inputs" id="country" required name="country">
+            <option selected value="-1">select</option>
+            <option>India</option>
+            <option>US</option>
+            <option>UK</option>
+            <option>Canada</option>
+        </select></td></tr>
+        <tr>
+        <td><label>Programming languages known *</label></td>
+        <td> <input type="checkbox" id="languages"/>
+           <label>C</label><br>
+          <input type="checkbox" id="languages"/>
+            <label>Java</label><br>
+          <input type="checkbox" id="languages"/>
+            <label class="input">HTML</label><br>
+          <input type="checkbox" id="languages"/>
+            <label >CSS</label><br>
+          <input type="checkbox" id="languages"/>
+            <label>Python</label></td>
+        </tr>
+        <tr>
+        <td><label>Address *</label></td>
+         <td><textarea class="inputs" id="message" required placeholder="Enter your address here..."></textarea></td>
+        </tr>
+        <tr>
+        <td><label>Upload a file * </label></td>
+        <td><input class="inputs" type="file" required/></td></tr>
+        </table>
+        <input id="button" type="submit" onclick="Register()" value="Register">
+    </div>
+</form>
+</body>
+<script src="D:\myproject\registration page\registration2.js"></script>
+</html>
