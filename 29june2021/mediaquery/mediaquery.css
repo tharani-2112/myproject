@@ -1,0 +1,21 @@
+body{
+    background-color:lightskyblue;
+    color: black;
+}
+@media screen and (max-width: 600px) {
+        body {
+          background-color:rgb(10, 235, 160);
+          color: black;
+        }
+}
+#paragraph
+{
+ padding:100px 100px;
+ margin-left: 50px;
+ margin-right: 50px;
+}
+#content
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
