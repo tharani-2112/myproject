@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:blueviolet;
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+.regform{
+    width: 800px;
+    background-color: black;
+    margin: auto;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+}
+.main{
+    background-color: white;
+    width: 800px;
+    margin: auto;
+}
+form{
+    padding: 10px;
+}
+#name{
+    width: 100%;
+    height:100px;
+}
+.name{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    color:grey;
+    font-size: 20px;
+    font-weight: 700;
+}
+.firstname{
+    position: relative;
+    top: -37px;
+    left: 200px;
+    line-height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 0 22px;
+    color:black;
+}
+.lastname
+{
+    position: relative;
+    left: 417px;
+    top: -80px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: black;
+}
+.firstlabel{
+    position: relative;
+    color:lightgrey;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 203px;
+    top:-45px;
+}
+.lastlabel{
+    position: relative;
+    color: lightgrey;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 492px;
+    top: -77px;
+}
+.company{
+    position: relative;
+    left:200px;
+    top: -37px;
+    line-height: 40px;
+    width: 500px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color:black;
+}
+.email{
+    position: relative;
+    left:200px;
+    top: -37px;
+    line-height: 40px;
+    width: 500px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: black;
+}
+.code{
+    position: relative;
+    top: -37px;
+    left: 200px;
+    width: 95px;
+    line-height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 0 22px;
+    color: black;
+}
+.number{
+    position: relative;
+    top: -80px;
+    left: 300px;
+    width: 320px;
+    line-height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 0 22px;
+    color: black;
+}
+.area-code{
+    position: relative;
+    color:lightgrey;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 203px;
+    top:-45px;
+}
+.phone-number{
+    position: relative;
+    color:lightgrey;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 370px;
+    top:-77px;
+}
+.option{
+    position: relative;
+    left: 200px;
+    top: -65px;
+    width: 535px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 0 22px;
+    color: black;
+    overflow: hidden;
+    border-color:black;
+    border-width: 2px;
+}
+#student{
+    margin-left: 25px;
+    margin-top: 10px;
+    width: 300px;
+    color: grey;
+    font-size: 20px;
+    font-weight: 700;
+}
+.name1{
+    margin-left: 25px;
+    width: 125px;
+    color: grey;
+    font-size: 20px;
+    font-weight: 700;
+}
+.option option{
+    font-size: 20px;
+}
+.radio{
+    display: inline-block;
+    padding-right: 70px;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 15px;
+    color:grey;
+}
+.radio input{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+button{
+    background-color:lightgrey;
+    display: block;
+    text-align: center;
+    border:3px solid black;
+    padding : 10px 20px;
+    font-size: 25px;
+    margin-left:300px;
+    margin-top: 20px;
+    cursor: pointer;
+}
