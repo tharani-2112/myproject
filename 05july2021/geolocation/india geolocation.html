@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation Assignment</title>
+        <style>
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .Indiamap{
+                position: relative;
+            }
+            .Indiamap img{
+                display: block;
+            }
+            .Indiamap .area{
+                display: block;
+                position: absolute;
+                transition: box-shadow 0.15s ease-in-out;
+            }
+            .Indiamap .area:hover{
+                box-shadow: 0px 0px 1vw rgba(0,0,0,0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="india.jpg" alt="India map" usemap="#Indiamap" width="800" height="948"><br><br>
+        <map name="Indiamap">
+            <area shape="rect" title="Latitude :11.059821, Longitude :78.387451" coords="223,795,336,739" href="" title="" alt="Tamil Nadu">
+            <area shape="rect" title="Latitude :10.850516, Longitude :76.271080" coords="175,763,229,798" href="" alt="Kerala">
+            <area shape="rect" title="Latitude :15.317277, Longitude :75.713890"  coords="158,700,254,650" href="" alt="Karnataka">
+            <area shape="rect" title="Latitude :15.2993 , Longitude :74.1240" coords="144,670,159,691" href="" alt="Goa">
+            <area shape="rect" title="Latitude :15.9129 ,  Longitude :79.7400" coords="248,666,340,732" href="" alt="Andhra Pradesh">
+            <area shape="rect" title="Latitude :17.123184 ,  Longitude :79.208824" coords="267,548,345,639" href="" alt="Telangana">
+            <area shape="rect" title="Latitude : 19.601194,  Longitude :75.552979" coords="126,505,259,597" href="" alt="Maharastra">
+            <area shape="rect" title="Latitude :20.940920 ,  Longitude :84.803467" coords="440,468,519,561" href="" alt="Orissa">
+            <area shape="rect" title="Latitude :21.295132 ,  Longitude :81.828232" coords="349,430,384,586" href="" alt="Chattisgarh">
+            <area shape="rect" title="Latitude :23.473324 ,  Longitude :77.947998" coords="189,389,350,495" href="" alt="Madhya Pradesh">
+            <area shape="rect" title="Latitude :22.309425 ,  Longitude :72.136230" coords="3,407,155,516" href="" alt="Gujarat">
+            <area shape="rect" title="Latitude : 27.391277,  Longitude :73.432617" coords="54,232,245,412" href="" alt="Rajasthan">
+            <area shape="rect" title="Latitude :22.978624 ,  Longitude :87.747803" coords="497,396,586,483" href="" alt="West Bengal">
+            <area shape="rect" title="Latitude :23.6102 ,  Longitude :85.2799" coords="428,399,524,470" href="" alt="Jharkhand">
+            <area shape="rect" title="Latitude :29.238478 , Longitude :76.431885" coords="186,237,263,299" href="" alt="Haryana">
+            <area shape="rect" title="Latitude : 28.7041,  Longitude :77.1025" coords="247,272,256,285" href="" alt="Delhi">
+            <area shape="rect" title="Latitude :31.1471 ,  Longitude :75.3412" coords="166,166,244,228" href="" alt="Punjab">
+            <area shape="rect" title="Latitude :32.084206 , Longitude :77.571167" coords="224,144,308,200" href="" alt="Himachal Pradesh">
+            <area shape="rect" title="Latitude :30.0668 ,  Longitude :79.0193" coords="275,203,333,278" href="" alt="Uttarkhand">
+            <area shape="rect" title="Latitude :28.207609 , Longitude :79.826660" coords="254,240,423,383" href="" alt="Uttar Pradesh">
+            <area shape="rect" title="Latitude : 25.0961,  Longitude :85.3131" coords="433,316,527,393" href="" alt="Bihar">
+            <area shape="rect" title="Latitude :33.2778 ,  Longitude :75.3412" coords="141,17,319,160" href="" alt="Jammu & Kashmir">
+            <area shape="rect" title="Latitude :27.5330 , Longitude :88.5122" coords="549,289,570,316" href="" alt="Sikkim">
+            <area shape="rect" title="Latitude :26.244156 , Longitude :92.537842" coords="600,325,709,345" href="" alt="Assam">
+            <area shape="rect" title="Latitude :25.4670 ,  Longitude :91.3662" coords="601,353,678,371" href="" alt="Meghalaya">
+            <area shape="rect" title="Latitude :23.745127 , Longitude :91.746826" coords="667,395,638,430" href="" alt="Tripura">
+            <area shape="rect" title="Latitude :28.2180 ,  Longitude :94.7278" coords="650,237,662,314" href="" alt="Arunachal Pradesh">
+            <area shape="rect" title="Latitude :23.1645 ,  Longitude :92.9376" coords="674,375,689,463" href="" alt="Mizoram">
+            <area shape="rect" title="Latitude :24.6637 ,  Longitude :93.9063" coords="698,360,696,402" href="" alt="Manipur">
+            <area shape="rect" title="Latitude :26.1584 ,  Longitude :94.5624" coords="741,308,740,350" href="" alt="Nagaland">
+        </map>
+        <script>
+            var images = document.querySelectorAll('img[usemap]');
+            images.forEach( function(image) {
+            var mapid = image.getAttribute('usemap').substr(1);
+            var imagewidth = image.getAttribute('width');
+            var imageheight = image.getAttribute('height');
+            var imagemap = document.querySelector('map[name="'+mapid+'"]');
+            var areas = imagemap.querySelectorAll('area');
+
+            image.removeAttribute('usemap');
+            imagemap.remove();
+
+            // create wrapper container
+            var wrapper = document.createElement('div');
+            wrapper.classList.add('Indiamap');
+            image.parentNode.insertBefore(wrapper, image);
+            wrapper.appendChild(image);
+
+            areas.forEach( function(area) {
+            var coords = area.getAttribute('coords').split(',');
+            var xcoords = [parseInt(coords[0]),parseInt(coords[2])];
+            var ycoords = [parseInt(coords[1]),parseInt(coords[3])];
+            xcoords = xcoords.sort(function(a, b){return a-b});
+            ycoords = ycoords.sort(function(a, b){return a-b});
+            wrapper.innerHTML += "<a href='"+area.getAttribute('href')+"' title='"+area.getAttribute('title')+"' class='area' style='left: "+((xcoords[0]/imagewidth)*100).toFixed(2)+"%; top: "+((ycoords[0]/imageheight)*100).toFixed(2)+"%; width: "+(((xcoords[1] - xcoords[0])/imagewidth)*100).toFixed(2)+"%; height: "+(((ycoords[1] - ycoords[0])/imageheight)*100).toFixed(2)+"%;'></a>";
+    });
+});
+        </script>
+        </body>
+</html>

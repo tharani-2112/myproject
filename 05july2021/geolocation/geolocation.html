@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Geolocation</title>
+</head>
+
+<body>
+    <input type="button" value="Get Location" id="location">
+    <p>Location details will appear here</p>
+
+    <script>
+        document.getElementById('location').addEventListener('click', () => {
+
+            if (!navigator.geolocation) {
+                document.querySelector('p').innerHTML = 'Geolocation is not supported by your browser';
+            } else {
+                document.querySelector('p').innerHTML = 'Locating…';
+                navigator.geolocation.watchPosition(success, error);
+                
+            }
+
+
+            function success(position) {
+                document.querySelector('p').innerHTML = "latitude : " + position.coords.latitude + "<br> longitude : " + position.coords.longitude;
+
+            }
+
+            function error() {
+                document.querySelector('p').innerHTML = "error";
+            }
+        })
+    </script>
+</body>
+
+</html>
