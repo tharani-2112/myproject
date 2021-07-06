@@ -3,19 +3,16 @@ function Register() {
     var cpassword= document.getElementById("ps2").value;
     var fullName = document.getElementById("FullName").value;
     var userName = document.getElementById("UserName").value;
-    var male = document.getElementById("m_Gender").checked;
-    var female = document.getElementById("f_Gender").checked;
-    var country = document.getElementById("country");
     var message = document.getElementById("message").value;
     if (
         fullName != "" &&
         userName != "" &&
         password != "" &&
         cpassword != "" &&
-        Gender != ""&&
         message != ""&&
-        language !=""&&
-        file!=""
+        selectedValue != "select"&&
+        gender_value != ""
+        
     ) {
         return call();
     }  
@@ -34,7 +31,7 @@ function Register() {
             } else {
                 p1.innerHTML = "Name Should only contain character";
                 console.log("Number Occured");
-                break;
+        
             }
         }
     }
@@ -47,12 +44,10 @@ function Register() {
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(userName))
         {
          p2.innerHTML = "";
-         return (true);
          }
         else {
             //alert("You have entered an invalid email address!");
             p2.innerHTML = "Enter Email Address in correct format";
-            return (false);
         }
     }
 
@@ -65,7 +60,6 @@ function Register() {
             p4.innerHTML = "Enter Atleast 5 character";
         } else {
             p4.innerHTML = "";
-            return(false);
         }
     }
      console.log(password);
@@ -82,16 +76,20 @@ function Register() {
         } else{
             console.log("c");
             p5.innerHTML="Enter confirm password as same as your password";
-            return(false);
         }
     }
-
-    if ((male== true)||(female==true)) {
-            p3.innerHTML = "";
-        }
-        else{
-            p3.innerHTML = "Specify Gender";
-        }
+    
+    var gender = document.getElementsByName('gender');
+        var gender_value = "";
+        gender.forEach(function(element) {
+            if (element.checked) {
+                gender_value = element.value;
+            }
+        })
+        if (gender_value == "") {
+            document.getElementById("p3").innerHTML = "Please Select Your Gender";
+        } else {
+            document.getElementById("p3").innerHTML = "";
 
     var selectedValue = country.options[country.selectedIndex].value;
     if (selectedValue == "select"){
@@ -164,9 +162,9 @@ function Register() {
         display_error.innerHTML= error_msg;
         return false;
     }
-var checked = 0;
+/*var checked = 0;
 var language = document.getElementById("languages");
-var lang = tblFruits.getElementsByTagName("INPUT");
+var lang = document.getElementsByTagName("INPUT");
 for (var i = 0; i < lang.length; i++) {
         if (lang[i].checked) {
             checked++;
@@ -180,7 +178,8 @@ for (var i = 0; i < lang.length; i++) {
         return false;
     }
 }
-     
+}*/
+        } 
     function call() {
         alert(`
         Name :${fullName}
@@ -190,4 +189,4 @@ for (var i = 0; i < lang.length; i++) {
         languagesknown:${languages}
         Address:${message}
         `);
-    }
+    }}
