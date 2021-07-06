@@ -1,0 +1,31 @@
+p{
+animation-name: floatText;
+animation-duration: 2s;
+
+}
+.animated > * {
+  display: inline-block;
+  position: relative;
+  animation: 3s linear 0s infinite alternate move;
+}
+@keyframes move {
+  0%,
+  25% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+  75%,
+  100% {
+    transform: translateX(-100%);
+    left: 100%;
+  }
+} 
+#rectangle
+{
+    width: 900px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
