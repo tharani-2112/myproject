@@ -1,0 +1,18 @@
+<script>
+    function detail(firstname, age) {
+        this.firstname = firstname;
+        this.age = age;
+    }
+    detail.prototype.phone = function() {
+        console.log("5662");
+    };
+    let detail_object = new detail("mk", 24);
+    detail_object.phone();
+</script>
+
+<!--
+    prototype property is basically an object, where we can
+    attach methods and property in a prototype object
+    which enables all the other objects inherit these
+    methods and properties
+-->

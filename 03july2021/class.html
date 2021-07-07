@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+    function add_content() {
+        var elements = document.getElementsByClassName("demo");
+
+        var no = 0;
+        for (let i of elements) {
+            no++;
+            console.log("Element number : " + no);
+        }
+    }
+</script>
+
+<body>
+
+    <button onclick="add_content()">Add Content</button>
+    <p class="demo"></p>
+    <p class="demo">hello</p>
+    <p class="demo">welcome</p>
+    <div class="demo"></div>
+    <div class="demo"></div>
+    <div class="demo"></div>
+
+</body>
+</html>
