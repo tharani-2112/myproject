@@ -10,6 +10,6 @@ p::first-line
 a:hover{
  color:red;
 }
-a:visited{
-    color: darkgreen;
+a.visited{
+    color: green;
 }

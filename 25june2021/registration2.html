@@ -5,17 +5,17 @@
 </head>
 <body>
     <div id="container">
-    <form class="form" action="register.php" method="post">
+    <form class="form" action="success.html" >
              <h2 class="heading">REGISTRATION FORM</h2>
     <table>
         <tr>
         <td><label>Name *</label></td>
-        <td><input class="inputs" name="FullName" id="FullName" required type="text" max="20" placeholder="FullName"/>
+        <td><input class="inputs" name="FullName" id="FullName" required type="text" minlength="3" maxlength="20" placeholder="FullName"/>
             <p id="p1" class="subTest"></p></td>
         </tr>
         <tr>
         <td><label>UserName *</label> </td>       
-        <td><input class="inputs" id="UserName" name="UserName" required type="email" max="30"  placeholder="Email"/>
+        <td><input class="inputs" id="UserName" name="UserName" required type="email" minlength="5" maxlength="30"  placeholder="Email"/>
             <p id="p2" class="subTest"></p></td>
         </tr>
         <tr>  
@@ -64,7 +64,7 @@
         <td><label>Upload a file * </label></td>
         <td><input class="inputs" type="file" required/></td></tr>
         </table>
-        <a href="D:\dailytasks\25june2021\success.html"><input id="button" type="submit" value="Register"></a>
+        <button id="button" value="Submit">Register</button>
     </div>
 </form>
 </body>

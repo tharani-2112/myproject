@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dom</title>
+
+</head>
+
+<body>
+
+    <div id="Div1"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+    <script>
+        let root = document.getElementById("Div1");
+
+        let child = document.createElement("h1");
+        child.appendChild(document.createTextNode("This is dom"));
+
+        child.setAttribute("style", "color:red");
+        child.setAttribute("id", "h1_tag");
+
+
+        root.appendChild(child);
+
+        //query selector
+        var div = document.querySelectorAll("div");
+        console.log(div);
+    </script>
+
+</body>
+
+</html>

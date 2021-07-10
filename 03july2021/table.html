@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: separate;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <table>
+        <caption><b>Basic table</b></caption>
+        <tr>
+            <th>S.No</th>
+            <th>Activity</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Exploration</td>
+            <td>Completed</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Implementation</td>
+            <td>Completed</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Meeting</td>
+            <td>Completed</td>
+        </tr>
+    </table>
+
+    <br>
+    <table>
+        <caption><strong>Row Span</strong></caption>
+        <tr>
+            <th>S.No</th>
+            <th>Activity</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Exploration</td>
+            <td rowspan="2">Completed</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Implementation</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Meeting</td>
+            <td>Completed</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <caption><b>Col Span</b></caption>
+        <tr>
+            <th>S.No</th>
+            <th>Activity</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td colspan="2">No content</td>
+
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Implementation</td>
+            <td>Completed</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Meeting</td>
+            <td>Completed</td>
+        </tr>
+    </table>
+</body>
+
+</html>

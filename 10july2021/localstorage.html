@@ -1,0 +1,27 @@
+<body>
+
+    <input type="text" name="" value="" placeholder="key " id="key">
+    <input type="text" name="" value="" placeholder="value" id="value">
+    <input type="button" name="" value="Click to add to localStorage" onclick="add_to_local_storage()">
+    <input type="button" name="" value="retrieve" onclick="retrive()">
+    <p id="paragraph"></p>
+
+    <script type="text/javascript">
+        function add_to_local_storage() {
+            var key = document.getElementById('key').value;
+            var val = document.getElementById('value').value;
+            //localStorage.clear();
+            localStorage.setItem(key, val);
+        }
+
+        function retrive() {
+            var val = "";
+            for (i = 0; i < localStorage.length; i++) {
+                val = val + localStorage.key(i) + " : " + localStorage.getItem(localStorage.key(i)) + "\n";
+            }
+
+            document.getElementById("paragraph").innerHTML = val;
+        }
+    </script>
+
+</body>

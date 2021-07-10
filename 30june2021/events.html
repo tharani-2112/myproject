@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Event page</title>
+    <style>
+        #display:hover {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="date" type="submit" onclick="document.getElementById('display').innerHTML=Date()">click
+    </button>
+    <input type="text"  onchange="value_Change()" value="" id="num">
+    <input type="button" value="Single click" onclick="single_Click()">
+    <input type="button" value="Double click" ondblclick="double_Click()">
+    <p id="display"></p>
+    <p id="text"></p>
+    <script>
+        var btn = document.querySelector(".date");
+
+        btn.addEventListener("mouseover", function () {
+            this.textContent = "Click here to see the date and time";
+        })
+        btn.addEventListener("mouseout", function () {
+            this.textContent = "click";
+        })
+        function single_Click() {
+            document.getElementById("text").innerHTML = "Single click happped!!!";
+        }
+
+        function double_Click() {
+            document.getElementById("text").innerHTML = "Double click happped!!!";
+        }
+        document.getElementById("num").addEventListener("change", () => {
+            document.getElementById("text").innerHTML = "The value is:" + document.getElementById("num").value;
+        })
+    </script>
+</body>
+
+</html>

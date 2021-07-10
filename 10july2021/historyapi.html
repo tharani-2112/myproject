@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function goBack() {
+  history.back()
+}
+function goforward() {
+  history.forward()
+}
+
+function go() {
+  window.history.go(-2);
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Back" onclick="goBack()">
+<input type="button" value="forward" onclick="goforward()">
+<button onclick="go()">Go Back 2 Pages</button>
+</body>
+</html>

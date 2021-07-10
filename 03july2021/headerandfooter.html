@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <style>
         .all-browsers {
             margin: 0;
-            padding: 5px;
-            background-color: lightgray;
+            padding: 10px;
+            background-color: pink;
         }
 
         .all-browsers>h1,
@@ -28,7 +28,7 @@
         footer {
             text-align: center;
             padding: 3px;
-            background-color: DarkSalmon;
+            background-color: lightskyblue;
             color: white;
         }
     </style>
@@ -36,22 +36,22 @@
 
 <body>
     <header>
-        <h1>The article and footer elements + CSS</h1>
+        <h1 title="this is title">The article and footer elements + CSS</h1>
     </header>
     <article class="all-browsers">
         <h1>Most Popular Browsers</h1>
-        <article class="browser">
-            <h2>Google Chrome</h2>
-            <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular
-                web browser today!</p>
-        </article>
         <section class="browser">
-            <h2>Mozilla Firefox</h2>
-            <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most
+            <h2 title="google">Google Chrome</h2>
+            <p>Google Chrome is a web browser developed by<span style="background-color:violet ;">Google</span>, released in 2008. Chrome is the world's most popular
+                web browser today!</p>
+        </section>
+        <section class="browser">
+            <h2 title="Firefox">Mozilla Firefox</h2>
+            <p>Mozilla Firefox is an open-source web browser developed by<mark> Mozilla</mark>. Firefox has been the second most
                 popular web browser since January, 2018.</p>
         </section>
         <section class="browser">
-            <h2>Microsoft Edge</h2>
+            <h2 title="microsoft">Microsoft Edge</h2>
             <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced
                 Internet Explorer.</p>
         </section>
