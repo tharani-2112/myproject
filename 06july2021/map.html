@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script>
+    users = [
+  {
+    name: 'Anu',
+    age: 25
+  },
+  {
+    name: 'Sam',
+    age: 30
+  },
+  {
+    name: 'Tamil',
+    age: 20
+  }
+];
+total=0;
+startsWithS = (string) => string.toLowerCase().startsWith('s');
+getName = (user) => user.name;
+usernames = [];
+  usernames = users.map(getName);
+console.log(usernames);
+namesStartingWithS = users.filter((user) => startsWithS(user.name));
+console.log(namesStartingWithS);
+totalAge = users.reduce((total, user) => user.age + total, 0);
+console.log(totalAge);
+</script>
+</html>

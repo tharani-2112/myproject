@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        document.write("<h4>SETS</h4>")
+        let set = new Set();
+        set.add("1");
+        set.add(1);
+        set.add("Tharu")
+        document.write("Set size : " + set.size);
+        document.write("<br>Set Elements : ");
+        set.forEach(element => {
+            document.write(element + " ");
+        });
+        document.write("<br>set contain 1 or not :" + set.has("1"));
+
+        set.delete("1");
+        document.write("<br>set contain 1 or not :" + set.has("1") + "<br>");
+
+        document.write("<h4>MAPS</h4>")
+            //maps
+        let map = new Map();
+        map.set("name", "Tharani");
+        map.set("age", "21");
+        map.set("gender", "Female");
+
+        map.forEach((value, key) => {
+            document.write(key + " : " + value + "<br>");
+        });
+
+
+        //weak Set
+        document.write("<h4>Weak Set</h4>");
+        let weakSet = new WeakSet();
+        let obj1 = {},
+            obj2 = {};
+        weakSet.add(obj1);
+        weakSet.add(obj2);
+        obj1 = null;
+        console.log(weakSet.has(obj1))
+    </script>
+</head>
+
+<body></body>
+
+</html>

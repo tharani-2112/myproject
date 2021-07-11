@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Difference</title>
+    <title>Let's See the difference</title>
     <style>
         p {
             font-size: large;
@@ -11,14 +11,24 @@
 
 </head>
 
-<p id="paragraph-1"><i>Welcome you All</i></p>
+<p id="paragraph-1"><i>SOMETIMES YOU GOTTA run BEFORE YOU CAN walk</i></p>
+
+
+<h1>Value using InnerText </h1>
+<p id="innerText"></p>
+<h1>value using InnerHtml</h1>
+<p id="innerHtml"></p>
+
 
 <p id="html"></p>
 <p id="text"></p>
 
 <script>
+    document.getElementById("innerText").innerText = document.getElementById("paragraph-1").innerHTML;
+    document.getElementById("innerHtml").innerText = document.getElementById("paragraph-1").innerText;
+
     document.getElementById("html").innerHTML = "<b>Hello World!!!</b>";
-    document.getElementById("text").innerText = "<b>Hello World!!!</b>";
+    document.getElementById("text").innerText = "<b>Hello World!!!</b>"
 </script>
 
 </html>

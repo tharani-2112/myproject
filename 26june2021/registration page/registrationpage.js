@@ -7,19 +7,6 @@ function Register() {
     var gender = document.getElementsByName('gender');
     var valid = true;
 
-    /*if (
-        fullName != "" &&
-        userName != "" &&
-        password != "" &&
-        cpassword != "" &&
-        message != "" &&
-        gender_value != ""&&
-        valid!=false
-    
-    ) {
-        return call();
-    }*/
-
 //name validation
     if (fullName == "") {
         p1.innerHTML = "Enter your name";
@@ -38,6 +25,7 @@ function Register() {
             }
         }
     }
+
 //email validation
     if (userName == "") {
         p2.innerHTML = "Enter your email";
@@ -61,6 +49,14 @@ function Register() {
         } else {
             p4.innerHTML = "";
         }
+    }
+
+//text field validation
+    if (message == "") {
+        p8.innerHTML = "Please enter address";
+    } else {
+        p8.innerHTML = "";
+        
     }
     //console.log(password);
     //console.log(cpassword);
@@ -98,6 +94,7 @@ function Register() {
         else {
             p6.innerHTML = "";
         }
+
 //checkbox validation
 var language = document.querySelectorAll('input[type="checkbox"]:checked');
     var language_value = "";
@@ -111,73 +108,49 @@ var language = document.querySelectorAll('input[type="checkbox"]:checked');
         })
         document.getElementById("p7").innerHTML = "";
     }
-    /*var c_lang=document.getElementById("c").checked;
-    var java_lang=document.getElementById("java").checked;
-    var html_lang=document.getElementById("html").checked;   
-    var css_lang=document.getElementById("css").checked;
-    var python_lang=document.getElementById("python").checked;
-    {
-        if((c_lang==true)||(java_lang==true)||(html_lang==true)||(css_lang==true)||(python_lang==true))
-        {
-            p7.innerHTML="";
-        } else{
-            p7.innerHTML="Choose anyone language";
-        }
-    }*/
-
-//text field validation
-    if (message == "") {
-        p8.innerHTML = "Please enter address";
-    } else {
-        p8.innerHTML = "";
-        return false;
-    }
+  
 //file validation
-    var valid = true;
-    var file_name = "";
-    var file_type = "";
-    var file_size = "";
-    var error_msg = "";
-    var valid_size = 2 * 1000 * 1000;
-    var display_error = document.getElementById('p9');
-    var file = document.getElementById("file");
-
-    if (file.files.length != 0) {
-        file_name = file.files[0].name;
-        file_size = file.files[0].size;
-        file_type = file.files[0].type;
-
-        if (file_type != ".pdf") {
-            valid = false;
-            error_msg = error_msg + "\n* Only .pdf file type supported.";
-        }
-        if (file_size > valid_size) {
-            valid = false;
-            error_msg = error_msg + "\n* Filesize should be upto 2MB.";
-        }
-    }
-    else {
-        valid = false;
-        error_msg = error_msg + "\n* Please select any pdf file.";
-    }
-    if (valid == true) {
-        display_error.innerHTML = "";
-        return true;
-    }
-    else {
-        display_error.innerHTML = error_msg;
-        return false;
-    }
+        var valid = true;
+        var file_name = "";
+        var file_type = "";
+        var file_size = "";
+        var error_msg = "";
+        var valid_size = 2 * 1000 * 1000;
+        var display_error = document.getElementById('p9');
+        var file = document.getElementById("file");
     
+        if (file.files.length != 0) {
+            file_name = file.files[0].name;
+            file_size = file.files[0].size;
+            file_type = file.files[0].type;
+    
+            if (file_type != "application/pdf") {
+                valid = false;
+                error_msg = error_msg + "\n* Only pdf file type supported.";
+            }
+            if (file_size > valid_size) {
+                valid = false;
+                error_msg = error_msg + "\n* Filesize should be upto 2MB.";
+            }
+        }
+        else {
+            valid = false;
+            error_msg = error_msg + "\n* Please select any pdf file.";
+        }
+        if (valid == true) {
+            display_error.innerHTML = "";
+            return true;
+        }
+        else {
+            display_error.innerHTML = error_msg;
+            return false;
+        }  
+localStorage.setItem("Name",fullName);
+localStorage.setItem("Email",Username);
+localStorage.setItem("Gender",gender_value);
+localStorage.setItem("Country",selectedValue);
+localStorage.setItem("Language",language_value);
+localStorage.setItem("Address",message);
 }
-/*function call() {
-    alert(`
-        Name :${fullName}
-        Gender:${gender}
-        email:${userName}
-        country:${country.value}
-        languagesknown:${language}
-        Address:${message}
-        `);
-}*/
+
 

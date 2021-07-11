@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div p {
+  background-color: yellow;
+}
+div+p{
+    background-color: greenyellow;
+}
+div~p{
+    background-color: hotpink;
+}
+</style>
+</head>
+<body>
+
+<h2>Combinators</h2>
+<p>decsendant combinator</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section> 
+  <p>Paragraph 4 in the div.</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2> 
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const vegetables=["potato", "tomato"];
+document.getElementById("demo").innerHTML = fruits.toString();//returns array as comma seperated string
+document.getElementById("demo1").innerHTML = fruits.join(" * ");
+fruits.pop();//removes last element
+document.getElementById("demo2").innerHTML = fruits;
+fruits.push("Kiwi"); //add an element at last
+document.getElementById("demo3").innerHTML = fruits;
+fruits.shift();//removes first element
+document.getElementById("demo4").innerHTML = fruits;
+fruits.unshift("Grapes");//add an element at first
+document.getElementById("demo5").innerHTML = fruits;
+fruits.sort();
+document.getElementById("demo6").innerHTML = fruits;
+delete fruits[0];
+document.getElementById("demo7").innerHTML =fruits;
+fruits.splice(2, 0, "Strawberry", "cherry");//add elements in an array
+document.getElementById("demo8").innerHTML = "New Array:<br>" + fruits;
+const array = fruits.concat(vegetables);//joins 2 array
+document.getElementById("demo9").innerHTML = array;
+const citrus = fruits.slice(2);//removes 2 elements
+document.getElementById("demo10").innerHTML = citrus;
+
+
+</script>
+
+</body>
+</html>

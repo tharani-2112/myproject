@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color:hotpink;
+        }
+        
+        input:focus {
+            background-color: black;
+            color: white;
+        }
+        
+        #Div1:hover {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .Div2:hover {
+            width: 250px;
+        }
+        
+        #Div1 {
+            transition: width 3s 5s, height 3s;
+        }
+        
+        .Div2 {
+            transition-property: width;
+            transition-delay: 3s;
+            transition-duration: 3s;
+            transition-timing-function: linear;
+        }
+        
+        p:lang(en) {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="Div1"></div><br>
+
+    <div class="Div2"></div> <br>
+
+    <input type='text'>
+
+    <p lang="en">Welcome you all</p>
+
+</body>
+
+</html>
