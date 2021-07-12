@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a JSON string into a JavaScript object.</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+const myJSON = '{"name":"Tharu", "age":21, "city":"Namakkal"}';
+const myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj.name;
+const myJSON1 = '{"name":"Tharu", "age":21, "cars":["Ford", "BMW", "Honda"]}';
+const myObj1 = JSON.parse(myJSON1);
+
+let text = "";
+for (let i in myObj1.cars) {
+  text += myObj1.cars[i] + ", ";
+}
+
+document.getElementById("demo1").innerHTML = text;
+</script>
+
+</body>
+</html>

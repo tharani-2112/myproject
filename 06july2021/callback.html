@@ -1,0 +1,23 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<h1> JS callback </h1>
+<script>
+function getData(x, y, callback){
+document.write(" The multiplication of the numbers " + x + " and " + y + " is: " + (x*y) + "<br><br>" );
+callback();
+}
+function showData(){
+document.write(' This is the showData() method execute after the completion of getData() method.');
+}
+getData(20, 30, showData);
+
+</script>
+</body>
+
+</html>
+
+ 
