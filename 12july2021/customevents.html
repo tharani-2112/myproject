@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+	let x = 5;
+	const event = new Event("start");
+	
+	document.addEventListener('start', ()=>{
+	console.log("Start event triggered")
+	});
+	
+	if(x == 5){
+	document.dispatchEvent(event);
+	}
+</script>
+</body>
+</html>

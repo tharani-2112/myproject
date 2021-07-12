@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="D:\dailytasks\jquery.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").hide();
+  });
+});
+$(document).ready(function(){
+  $("#p1").mouseenter(function(){
+    alert("You entered p1!");
+  });
+});
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "green");
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p id="p1">This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+Name: <input type="text" name="fullname"><br>
+
+<button>Click me</button>
+
+</body>
+</html>

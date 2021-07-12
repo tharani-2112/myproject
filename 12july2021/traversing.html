@@ -1,0 +1,20 @@
+<ul class="list">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+    <li><a href="#">Link 4</a></li>
+    <li><a href="#">Link 5</a></li>
+</ul>
+<script>
+    const list = document.querySelector('.list');
+    const listItems = list.children;
+    console.log(listItems);
+
+    const firstListItem = document.querySelector('li');
+    const list1 = firstListItem.parentElement;
+    console.log(list);
+
+    const secondListItem = firstListItem.nextElementSibling;
+    console.log(secondListItem);
+
+</script>

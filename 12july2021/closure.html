@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Closures</h2>
+    <button type="button" onclick="myFunction()">Count!</button>
+    <p id="demo">0</p>
+    <script>
+        const add = (function () {
+            let counter = 0;
+            return function () { counter += 1; return counter; }
+        })();
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = add();
+        }
+    </script>
+
+</body>
+
+</html>
