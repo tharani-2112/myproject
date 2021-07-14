@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <section>
+            <div>
+                <p id = 'output'>
+                    Device Orientation check!!!
+                </p>
+            </div>
+        </section>
+        <script>
+                let ore = checkOri();
+                let out = document.getElementById('output');
+                out.textContent = ore;
+
+                function checkOri(event){
+  
+                    let _ore = (screen.orientation || (screen.msOrientation||screen.mozOrientation)).type;
+
+                    switch(_ore){
+                        case "portrait-primary":
+                        
+                        case "portrait-secondary":
+                            
+                            console.log("portrait");
+                            break;
+                        case "landscape-primary":
+                            console.log("landscape-primary");
+                            break;
+                        case "lanscape-secondary":
+                            console.log("Landscape-Secondary");
+                            break;
+                        case "undefined":
+                            console.log("Undefined");
+                            break;
+                        
+                        default:
+                            console.log("Nnothing");
+                            break;    
+                        }
+                        return(_ore);
+                }
+
+                window.addEventListener("orientationchange",event=>{
+                        ore = checkOri();
+                        out.textContent = ore;
+                        //console.dir(event);
+                })
+        </script>
+    </body>
+</html>
