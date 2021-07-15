@@ -1,0 +1,48 @@
+body{
+    background-image: url("background.jpg");
+}
+
+.multiselect {
+    width: 200px;
+}
+
+#container{
+    margin-top: 250px;
+    margin-left: 500px;
+}
+  
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    font-weight: bold;
+    background-color: lightcyan;
+    padding: 10px 20px;
+    font-size: large;
+    border-width: 3px;
+    border-radius: 3px;
+}
+  
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+  
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+  
+#checkboxes label {
+    display: block;
+    color: white;
+}
+  
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+  
